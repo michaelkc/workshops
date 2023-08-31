@@ -1,0 +1,15 @@
+spin_manifest_version = "1"
+authors = ["Michael Christensen <github@michaelkc.dk>"]
+description = ""
+name = "segeswasm"
+trigger = { type = "http", base = "/" }
+version = "0.1.0"
+
+[[component]]
+id = "segeswasm"
+source = "target/segeswasm.wasm"
+exclude_files = ["**/node_modules"]
+[component.trigger]
+route = "/ts"
+[component.build]
+command = "npm run build"
